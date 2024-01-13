@@ -50,7 +50,12 @@
             function functionAdder(param,pref){
                 let num = param.toString();
                 var id = pref.concat(num);
-                document.getElementById(id).onclick=function () { invasiveCheck(param); };
+                if(pref=="b"){
+                    document.getElementById(id).onclick=function () { invasiveCheck(param); };
+                }else if(pref=="m"){
+                    document.getElementById(id).onclick=function () { changeMethod(param); };
+                }
+                
             }
 
             //changes the image of a button
@@ -92,9 +97,9 @@
  
         </div>
         <div class="bottomBar">
-            <button onclick="changeMethod(1)";> <img id="i1" src="" width="50px"/>net</button><!--add image of net-->
-            <button onclick="changeMethod(2)";> <img id="i2" src="" width="50px"/>skull</button><!--add image of skull-->
-            <button onclick="changeMethod(3)";> <img id="i3" src="" width="50px"/>shark</button><!--add image of shark-->    
+            <button onclick="" id="m1"> <img id="i1" src="" width="50px"/>net</button><!--add image of net-->
+            <button onclick="" id="m2"> <img id="i2" src="" width="50px"/>skull</button><!--add image of skull-->
+            <button onclick="" id="m3"> <img id="i3" src="" width="50px"/>shark</button><!--add image of shark-->    
         </div>
 
     </body>
