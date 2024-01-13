@@ -11,6 +11,7 @@
             <a class="active" href="./index.html">Home</a>
         </div>
         <script>
+            let method=0;
             function start(){
                 //changes the background
                 document.getElementById("gamecentre").style.backgroundImage = "url(images/ocean_background.jpg)";
@@ -41,6 +42,10 @@
                     changeImage("images/ocean_background.jpg",imageId); //add correct image
                 }
             }
+            function changeMethod(num){
+                method=num;
+                alert(num);
+            }
         </script>
 
         <div class="gamecentre" id="gamecentre">
@@ -56,6 +61,9 @@
             <button onclick="invasiveCheck(8)";> <img id="8" src="" width="50px"/></button>
             <button onclick="invasiveCheck(9)";> <img id="9" src="" width="50px"/></button>
  
+        </div>
+        <div class="bottomBar">
+            <button onclick="changeMethod(1)";> <img id="1" src="" width="50px"/>net</button><!--add image of net-->    
         </div>
 
     </body>
