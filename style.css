@@ -26,10 +26,13 @@
 }
 /*creating a grid*/
 .gamecentre {
-    background-image: url('images/');
+    background-image: url('images/ocean_background.jpg');
     display: grid;
     gap: 5px 10px;
     width:100%;
+    min-height: 100px;
+    max-height: 150px;
+    height: 100%;
     grid-template-columns: 25% 25% 25% 25%;
 }
 
