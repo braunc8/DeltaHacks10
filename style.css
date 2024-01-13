@@ -24,14 +24,17 @@
     background-color: #04AA6D;
     color: white;
 }
-
+/*creating a grid*/
 .gamecentre {
+    background-image: url('images/');
     display: grid;
     gap: 5px 10px;
     width:100%;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-column-start: 1;
-    grid-column-end: 3;
-
 }
 
+/*makes the buttons invisible*/
+button{
+    background: transparent;
+    border: none !important;
+}
