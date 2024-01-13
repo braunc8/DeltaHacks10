@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ocean Invaders</title>
+
+</head>
+<body>
+    <script type = "text/javascript"> 
+        function changeImage() {
+            var imageId = document.getElementById("buttonImage");
+            if (imageId.src.endsWith("inv.png")){
+                imageId.src = "images/correct.png";
+            } else {
+                imageId.src = "images/incorrect.png";
+            } 
+        }
+
+        function spawn() {
+
+        }
+
+
+
+
+     </script>
+
+   finding carps <br><br>
+   <button id="button" onclick="changeImage()">
+    <img id="buttonImage" src="images/fish.jpg" width = "400" height = "400" alt = "Image 1">
+  </button>
+   
+</body> 
+</html>
