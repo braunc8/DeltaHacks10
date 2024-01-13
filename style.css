@@ -29,7 +29,7 @@
 
 /*creating a grid*/
 .gamecentre {
-    background-image: url('images/ocean_background.jpg');
+    background-image: url('');
     display: grid;
     gap: 5px 10px;
     width:100%;

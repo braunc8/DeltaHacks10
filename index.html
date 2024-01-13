@@ -6,31 +6,55 @@
 
     </head>
     <body>
-        <script>
-            function button(){
-
-            }
-        </script>
-        
+       
         <div class="topnav">
             <a class="active" href="./index.html">Home</a>
         </div>
-    
-
-        <div class="gamecentre">
-            <script>
+        <script>
+            function start(){
+                //changes the background
+                document.getElementById("gamecentre").style.backgroundImage = "url(images/ocean_background.jpg)";
                 
-            </script>
+                //erases the text on the start button
+                document.getElementById("start").innerHTML='';
+                
+                //generates the illegal carp
+                let x= Math.floor(Math.random() * 8+1);
+                let id=x.toString();
+                var imageId = document.getElementById(id);
+                changeImage("images/carp.jpg",imageId);//add invasive carp
+                document.getElementById("5").onclick=invasiveCheck; 
+                   
+            }
+
+            function changeImage(image,imageId) {
+                imageId.src = image;
+            }
+
+            function invasiveCheck(num_id){
+                let id=num_id.toString();
+                var imageId = document.getElementById(id);
+                if (imageId.src.endsWith("inv.png")){
+                    changeImage("images/carp.jpg",imageId);//add correct image
+                    
+                } else {
+                    changeImage("images/ocean_background.jpg",imageId); //add correct image
+                }
+            }
+        </script>
+
+        <div class="gamecentre" id="gamecentre">
             
-            <button onclick=button();> <img id="carp" src="images/carp.jpg" width="100px"/> </button>
-            <button>2</button>
-            <button>3</button>
-            <button>1</button>
-            <button>1</button>
-            <button>1</button>
-            <button>1</button>
-            <button>1</button>
-            <button>1</button>
+            
+            <button onclick="invasiveCheck(1)";> <img id="1" src="" width="50px"/></button>
+            <button onclick="invasiveCheck(2)";> <img id="2" src="" width="50px"/></button>
+            <button onclick="invasiveCheck(3)";> <img id="3" src="" width="50px"/></button>
+            <button onclick="invasiveCheck(4)";> <img id="4" src="" width="50px"/></button>
+            <button onclick="start()" id="start"> <img id="5" src="" width="50px"/>Start</button>
+            <button onclick="invasiveCheck(6)";> <img id="6" src="" width="50px"/></button>
+            <button onclick="invasiveCheck(7)";> <img id="7" src="" width="50px"/></button>
+            <button onclick="invasiveCheck(8)";> <img id="8" src="" width="50px"/></button>
+            <button onclick="invasiveCheck(9)";> <img id="9" src="" width="50px"/></button>
  
         </div>
 
