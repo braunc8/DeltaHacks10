@@ -15,33 +15,64 @@
             function start(){
                 //changes the background
                 document.getElementById("gamecentre").style.backgroundImage = "url(images/ocean_background.jpg)";
-                
-                //erases the text on the start button
-                document.getElementById("start").innerHTML='';
+
+                //erases the word start on the first button
+                var startId=document.getElementById("5");
+                changeImage("",startId)
                 
                 //generates the illegal carp
                 let x= Math.floor(Math.random() * 8+1);
                 let id=x.toString();
                 var imageId = document.getElementById(id);
                 changeImage("images/carp.jpg",imageId);//add invasive carp
-                document.getElementById("5").onclick=invasiveCheck; 
+
+                //generates the images on the method buttons
+                imageId = document.getElementById("i1");
+                changeImage("images/carp.jpg",imageId);
+                imageId = document.getElementById("i2");
+                changeImage("images/carp.jpg",imageId);
+                imageId = document.getElementById("i3");
+                changeImage("images/carp.jpg",imageId);
+
+                //adds functionality to all possible carp buttons - change to for loop?
+                for (let i = 1; i < 10; i++) {
+                    functionAdder(i,"b");
+                }
+
+
+
+                //adds functionality to the method changing buttons - use new function adding method lmaoooo
+                for (let i = 1; i < 4; i++) {
+                    functionAdder(i,"m");
+                }
                    
             }
+            function functionAdder(param,pref){
+                let num = param.toString();
+                var id = pref.concat(num);
+                document.getElementById(id).onclick=function () { invasiveCheck(param); };
+            }
 
+            //changes the image of a button
             function changeImage(image,imageId) {
                 imageId.src = image;
             }
 
+            //changes depending on whether the invasive species is there
             function invasiveCheck(num_id){
                 let id=num_id.toString();
                 var imageId = document.getElementById(id);
                 if (imageId.src.endsWith("inv.png")){
-                    changeImage("images/carp.jpg",imageId);//add correct image
+                    changeImage("images/ocean_background.jpg",imageId);//add correct image
                     
                 } else {
                     changeImage("images/ocean_background.jpg",imageId); //add correct image
                 }
             }
+
+
+            //for removal method
+
             function changeMethod(num){
                 method=num;
                 alert(num);
@@ -51,19 +82,23 @@
         <div class="gamecentre" id="gamecentre">
             
             
-            <button onclick="invasiveCheck(1)";> <img id="1" src="" width="50px"/></button>
-            <button onclick="invasiveCheck(2)";> <img id="2" src="" width="50px"/></button>
-            <button onclick="invasiveCheck(3)";> <img id="3" src="" width="50px"/></button>
-            <button onclick="invasiveCheck(4)";> <img id="4" src="" width="50px"/></button>
-            <button onclick="start()" id="start"> <img id="5" src="" width="50px"/>Start</button>
-            <button onclick="invasiveCheck(6)";> <img id="6" src="" width="50px"/></button>
-            <button onclick="invasiveCheck(7)";> <img id="7" src="" width="50px"/></button>
-            <button onclick="invasiveCheck(8)";> <img id="8" src="" width="50px"/></button>
-            <button onclick="invasiveCheck(9)";> <img id="9" src="" width="50px"/></button>
+            <button onclick="" id="b1"> <img id="1" src="" width="50px"/></button>
+            <button onclick="" id="b2"> <img id="2" src="" width="50px"/></button>
+            <button onclick="" id="b3"> <img id="3" src="" width="50px"/></button>
+            <button onclick="" id="b4"> <img id="4" src="" width="50px"/></button>
+            <button onclick="start()" id="b5"> <img id="5" src="" width="50px"/></button>
+            <button onclick="" id="b6"> <img id="6" src="" width="50px"/></button>
+            <button onclick="" id="b7"> <img id="7" src="" width="50px"/></button>
+            <button onclick="" id="b8"> <img id="8" src="" width="50px"/></button>
+            <button onclick="" id="b9"> <img id="9" src="" width="50px"/></button>
  
         </div>
         <div class="bottomBar">
-            <button onclick="changeMethod(1)";> <img id="1" src="" width="50px"/>net</button><!--add image of net-->    
+
+            <button onclick="changeMethod(1)";> <img id="i1" src="" width="50px"/>net</button><!--add image of net-->
+            <button onclick="changeMethod(2)";> <img id="i2" src="" width="50px"/>skull</button><!--add image of skull-->
+            <button onclick="changeMethod(3)";> <img id="i3" src="" width="50px"/>shark</button><!--add image of shark-->    
+
         </div>
 
     </body>
