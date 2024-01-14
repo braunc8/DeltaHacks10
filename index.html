@@ -8,7 +8,7 @@
     <body>
        
         <div class="topnav">
-            <a class="active" href="./index.html">Home</a>
+            <a class="active" href="./index.html">Game</a>
             <a href="./info.html">Info</a>
         </div>
         <script>
@@ -88,7 +88,7 @@
                 else {
   
                     changeImage("images/cross.png",imageId); //add correct image
-                    
+                    document.getElementById('invasiveDialog').show();
                 }
             }
 
@@ -102,7 +102,8 @@
                 document.getElementById('startDialog').close();
                 document.getElementById('removalDialog').close();
                 document.getElementById('congratsDialog').close();
-            }
+                document.getElementById('invasiveDialog').close();
+            }   
         </script>
 
         <div class="gamecentre" id="gamecentre">
@@ -119,13 +120,17 @@
             <button onclick="" id="b9"> <img id="9" src="" width="100px"/></button>
             
             <dialog id="startDialog" onclick="performClose()">
-                <p>Welcome to the game! Can you help us to save our ecosystem by finding the invading grass carp? When you spot it, make sure to select the correct removal method and then click on it!<br><br>Click me to close</p>
+                <img src="images/carp.png" width="100px"/>
+                <p>Welcome to the game! Can you help us to save our ecosystem by finding the invading grass carp (shown above)? When you spot it, make sure to select the correct removal method and then click on it!<br>Hint: the correct removal method can be found in the info page.<br><br>Click me to close</p>
             </dialog>
             <dialog id="removalDialog" onclick="performClose()">
                 <p>Wrong removal method! Please change it using the buttons at the bottom.<br><br>Click me to close</p>
             </dialog>
             <dialog id="congratsDialog" onclick="performClose()">
-                <p>You found the invasive species and used the correct removal method! Press reload to play again.<br><br>Click me to close</p>
+                <p>You found the grass carp and used the correct removal method! Press reload to play again or check out our info page to learn more.<br><br>Click me to close</p>
+            </dialog>
+            <dialog id="invasiveDialog" onclick="performClose()">
+                <p>The grass carp isn't here! Try again.<br><br>Click me to close</p>
             </dialog>
         </div>
         <div class="bottomBar">

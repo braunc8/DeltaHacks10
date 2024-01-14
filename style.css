@@ -90,7 +90,8 @@ button{
 
 dialog{
     position: fixed !important;
-    top: 260px !important;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #e5f6fe;
     width: 50%;
     text-align: center;
