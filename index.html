@@ -22,7 +22,7 @@
                 //erases the word start on the first button
                 var startId=document.getElementById("5");
 
-                document.getElementById('dialog').show();
+                document.getElementById('startDialog').show();
                 
                 changeImage("",startId)                
                 //generates the illegal carp
@@ -80,9 +80,9 @@
  
                         changeImage("images/check.png",imageId);//add correct image
                         
-                    alert("You found the invasive species and used the correct removal method! Press reset to play again.");
+                        document.getElementById('congratsDialog').show();
                     }else{
-                        alert("Wrong removal method! Please change it using the buttons at the bottom.");
+                        document.getElementById('removalDialog').show();
                     } 
                 }
                 else {
@@ -99,7 +99,9 @@
                 method=num;
             }
             function performClose() {
-                document.getElementById('dialog').close();
+                document.getElementById('startDialog').close();
+                document.getElementById('removalDialog').close();
+                document.getElementById('congratsDialog').close();
             }
         </script>
 
@@ -116,8 +118,14 @@
             <button onclick="" id="b8"> <img id="8" src="" width="100px"/></button>
             <button onclick="" id="b9"> <img id="9" src="" width="100px"/></button>
             
-            <dialog id="dialog" onclick="performClose()">
+            <dialog id="startDialog" onclick="performClose()">
                 <p>Welcome to the game! Can you help us to save our ecosystem by finding the invading grass carp? When you spot it, make sure to select the correct removal method and then click on it!<br><br>Click me to close</p>
+            </dialog>
+            <dialog id="removalDialog" onclick="performClose()">
+                <p>Wrong removal method! Please change it using the buttons at the bottom.<br><br>Click me to close</p>
+            </dialog>
+            <dialog id="congratsDialog" onclick="performClose()">
+                <p>You found the invasive species and used the correct removal method! Press reload to play again.<br><br>Click me to close</p>
             </dialog>
         </div>
         <div class="bottomBar">
