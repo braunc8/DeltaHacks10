@@ -14,11 +14,15 @@
         <script>
             let method=0;
             function start(){
+
+
                 //changes the background
                 document.getElementById("gamecentre").style.backgroundImage = "url(images/background.jpg)";
 
                 //erases the word start on the first button
                 var startId=document.getElementById("5");
+
+                document.getElementById('dialog').show();
                 
                 changeImage("",startId)                
                 //generates the illegal carp
@@ -94,6 +98,9 @@
             function changeMethod(num){
                 method=num;
             }
+            function performClose() {
+                document.getElementById('dialog').close();
+            }
         </script>
 
         <div class="gamecentre" id="gamecentre">
@@ -108,12 +115,17 @@
             <button onclick="" id="b7"> <img id="7" src="" width="100px"/></button>
             <button onclick="" id="b8"> <img id="8" src="" width="100px"/></button>
             <button onclick="" id="b9"> <img id="9" src="" width="100px"/></button>
- 
+            
+            <dialog id="dialog" onclick="performClose()">
+                <p>Welcome to the game! Can you help us to save our ecosystem by finding the invading grass carp? When you spot it, make sure to select the correct removal method and then click on it!<br><br>Click me to close</p>
+            </dialog>
         </div>
         <div class="bottomBar">
+            
             <button onclick="" id="m1"> <img id="i1" src="" width="0%"/>Net</button><!--add image of net-->
             <button onclick="" id="m2"> <img id="i2" src="" width="0%"/>Poison</button><!--add image of skull-->
             <button onclick="" id="m3"> <img id="i3" src="" width="0%"/>Shark</button><!--add image of shark-->    
+            <a href="./index.html">Reload</a>
         </div>
 
     </body>

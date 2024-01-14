@@ -1,63 +1,83 @@
 /*Background*/
 .topnav {
-  background-color: #333;
+  background-color: #a5c9d9 ;
   overflow: hidden;
-  height: 30px;
+  height: 5%;
 }
 
 /*Link stylization*/
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 4px 16px;
     text-decoration: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: 28px;
 }
 /*hover colour*/
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #072f6c;
+    color: white;
 }
 /*active colour*/
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #072f6c;
     color: white;
 }
 
 .bottomBar{
-    background-color: #333;
+    background-color: #a5c9d9;
     overflow: hidden;
-    height: 50px;
+    height: 5%;
 }
 
 
 .bottomBar button {
     float: left;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
-    padding: 5px 16px;
+    padding: 4px 16px;
     text-decoration: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: 28px;
+    
 }
 /*hover colour*/
 .bottomBar button:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #072f6c;
+    color: white;
 }
 
+.bottomBar a{
+    float: right;
+    background-color: #072f6c;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: 30px;
+}
+/*hover colour*/
+.bottomBar a:hover {
+    background-color: #072f6c;
+    color: white;
+}
 
 /*creating a grid*/
 .gamecentre {
+    background-color: #e5f6fe;
     background-image: url('');
     background-size: 100% 600px;
     background-repeat: no-repeat;
     background-position: center; 
     display: grid;
     min-height: 600px;
-    height: 100%;
+    height: 90%;
     grid-template-columns: 33% 34% 33%;
     grid-template-rows: 33% 34% 33%;
 }
@@ -66,4 +86,14 @@
 button{
     background: transparent;
     border: none !important;
+}
+
+dialog{
+    position: fixed !important;
+    top: 260px !important;
+    background-color: #e5f6fe;
+    width: 50%;
+    text-align: center;
+    font-size:larger;
+
 }
