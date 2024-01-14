@@ -1,0 +1,84 @@
+body {
+    background-color: #a5c9d9;
+  }
+
+.header {
+  padding: 16px 16px;
+  text-align: center;
+  background: #e5f6fe;
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.sectionHead {
+    text-align:center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.text{
+    font-size: 17px;
+
+}
+
+
+/* gridspace for carp types */
+.grid {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 20% 20% 20%;
+    display: flex;
+    justify-content: centre;
+    align-items: centre;
+
+  }
+  
+  /* create four adjacent columns */
+.cell {
+    background: #e5f6fe;
+    border: 10px solid #a5c9d9;
+
+  }
+  
+.cell img {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #a5c9d9;
+}
+
+/*text with coloured background*/
+.textbox {
+    text-align: center;
+    vertical-align: middle;
+    margin: 5px;
+    background: #89d6d6;
+  
+}
+
+/*style the buttons*/
+.button {
+    background-color: #072f6c; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+#grassCarp {
+    text-align:center;
+    padding: 15px;
+    background: #e5f6fe;
+}
+
+/* centre any child div of a parent */
+.child {
+    margin:auto;
+}

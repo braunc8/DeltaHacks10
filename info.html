@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="infostyle.css">
+    <title>Info Page</title>
+</head>
+<body>
+    <div class = "header">
+        <h1>
+            Danger in the Great Lakes: The Asian Carp
+        </h1>
+        <img src="images/carp.png">
+    </div>
+
+    <div class="text">
+        <p>The Asian carp is an invasive species that poses a great threat to the native species in the Great Lakes. Although they were first introduced to control algae in farms, they managed to escape to the rivers. They grow very quickly and are not prey for any of the natural predators. Soon, Ontario may have a very serious carp problem!</p>
+    </div>
+
+    <div class="container">
+        <div class="sectionHead"><h2>Meet the Invaders</h2></div>
+        <div class="text"> 
+            There are 4 main types of Asian carp present in U.S rivers that lead to the Great Lakes. 
+        </div>
+    </div>
+        
+    <div class="grid">
+        <div class="cell">
+            <img src="images/carp.png">
+            <div class="textbox">Bighead Carp</div>
+        </div>
+
+        <div class="cell">
+            <img src="images/check.png">
+            <div class="textbox">Silver Carp</div>
+        </div>
+
+        <div class="cell">
+            <img src="images/background.jpg">
+            <div class="textbox">Black Carp</div>
+         
+        </div>
+
+        <div class="cell">
+            <img src="images/cross.png">
+            <div class="textbox">Grass Carp</div>
+        </div>
+    </div>
+
+    <script>
+        function showPicture() {
+            var source = "images/carp.png";
+            var img = document.getElementById('pic')
+            img.src = source.replace('90x90', '200x200');
+            img.style.display = "block";
+        } 
+    </script>
+
+    <div id="grassCarp">
+        <div class="sectionHead"><h2>Which species poses the biggest threat at this moment to the Great Lakes?</h2></div>
+        <div class="child">
+            <button class="button" onclick="showPicture()">Let's find out!</button>
+            <img style="display:none;" id="pic" src="pic" />
+        </div>
+    </div>
+
+    <div class="container" id="fact">
+        <div class="sectionHead"><h2>Did you know?</h2></div>
+        <div class="text">
+            <p>Grass carp feed on huge amounts of aquatic plants needed for other species and can grow up to 5 ft long!</p>
+        </div>
+    </div>
+
+
+    <div class="container" id="identify">
+        <div class="sectionHead">
+            <h2>Confused with Carp?</h2></div>
+        <div class="text">
+            Identifying Asian Carp can be very difficut since they resemble many native Ontario species. The best way to avoid confusing them with common look-a-likes is to look for distinct markings/features.
+        </div>
+    </div>
+
+</body>
+</html>
