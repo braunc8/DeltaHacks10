@@ -8,7 +8,9 @@
         <h1>
             Danger in the Great Lakes: The Asian Carp
         </h1>
-        <img src="images/carp.png">
+        <div class="image">
+            <img src="images/carp_jump.jpg">
+        </div>
     </div>
 
     <div class="text">
@@ -21,33 +23,36 @@
             There are 4 main types of Asian carp present in U.S rivers that lead to the Great Lakes. 
         </div>
     </div>
-        
-    <div class="grid">
-        <div class="cell">
-            <img src="images/carp.png">
-            <div class="textbox">Bighead Carp</div>
-        </div>
-
-        <div class="cell">
-            <img src="images/check.png">
-            <div class="textbox">Silver Carp</div>
-        </div>
-
-        <div class="cell">
-            <img src="images/background.jpg">
-            <div class="textbox">Black Carp</div>
-         
-        </div>
-
-        <div class="cell">
-            <img src="images/cross.png">
-            <div class="textbox">Grass Carp</div>
+    
+    <div id="types">
+        <div class="grid">
+            <div class="cell">
+                <img src="images/bighead_carp.png">
+                <div class="textbox">Bighead Carp</div>
+            </div>
+    
+            <div class="cell">
+                <img src="images/silver_carp.png">
+                <div class="textbox">Silver Carp</div>
+            </div>
+    
+            <div class="cell">
+                <img src="images/black_carp.png">
+                <div class="textbox">Black Carp</div>
+             
+            </div>
+    
+            <div class="cell">
+                <img src="images/grass_carp.png">
+                <div class="textbox">Grass Carp</div>
+            </div>
         </div>
     </div>
 
+
     <script>
         function showPicture() {
-            var source = "images/carp.png";
+            var source = "images/grass_carp2.png";
             var img = document.getElementById('pic')
             img.src = source.replace('90x90', '200x200');
             img.style.display = "block";
