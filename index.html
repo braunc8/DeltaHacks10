@@ -9,6 +9,7 @@
        
         <div class="topnav">
             <a class="active" href="./index.html">Home</a>
+            <a href="./info.html">Info</a>
         </div>
         <script>
             let method=0;
@@ -18,8 +19,8 @@
 
                 //erases the word start on the first button
                 var startId=document.getElementById("5");
-                changeImage("",startId)
                 
+                changeImage("",startId)                
                 //generates the illegal carp
                 let x= Math.floor(Math.random() * 8+1);
                 let id=x.toString();
@@ -27,12 +28,14 @@
                 changeImage("images/carp.png",imageId);//add invasive carp
 
                 //generates the images on the method buttons
+
                 imageId = document.getElementById("i1");
-                changeImage("images/carp.jpg",imageId);
+                changeImage("",imageId);
                 imageId = document.getElementById("i2");
-                changeImage("images/carp.jpg",imageId);
+                changeImage("",imageId);
                 imageId = document.getElementById("i3");
-                changeImage("images/carp.jpg",imageId);
+                changeImage("",imageId);
+
 
                 //adds functionality to all possible carp buttons - change to for loop?
                 for (let i = 1; i < 10; i++) {
@@ -73,7 +76,7 @@
  
                         changeImage("images/check.png",imageId);//add correct image
                         
-                    alert("You found the invasive species and used the correct removal method!");
+                    alert("You found the invasive species and used the correct removal method! Press reset to play again.");
                     }else{
                         alert("Wrong removal method! Please change it using the buttons at the bottom.");
                     } 
@@ -101,16 +104,16 @@
             <button onclick="" id="b3"> <img id="3" src="" width="100px"/></button>
             <button onclick="" id="b4"> <img id="4" src="" width="100px"/></button>
             <button onclick="start()" id="b5"> <img id="5" src="images/start_button.png" width="100px" /></button>
-            <button onclick="" id="b6"> <img id="6" src="" width="100px"/></button>
+            <button onclick="" id="b6"> <img id="6" src="" width="100px" /></button>
             <button onclick="" id="b7"> <img id="7" src="" width="100px"/></button>
             <button onclick="" id="b8"> <img id="8" src="" width="100px"/></button>
             <button onclick="" id="b9"> <img id="9" src="" width="100px"/></button>
  
         </div>
         <div class="bottomBar">
-            <button onclick="" id="m1"> <img id="i1" src="" width="33%"/>net</button><!--add image of net-->
-            <button onclick="" id="m2"> <img id="i2" src="" width="34%"/>skull</button><!--add image of skull-->
-            <button onclick="" id="m3"> <img id="i3" src="" width="33%"/>shark</button><!--add image of shark-->    
+            <button onclick="" id="m1"> <img id="i1" src="" width="0%"/>Net</button><!--add image of net-->
+            <button onclick="" id="m2"> <img id="i2" src="" width="0%"/>Poison</button><!--add image of skull-->
+            <button onclick="" id="m3"> <img id="i3" src="" width="0%"/>Shark</button><!--add image of shark-->    
         </div>
 
     </body>
