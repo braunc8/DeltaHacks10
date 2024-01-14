@@ -42,6 +42,11 @@ body {
     justify-content: centre;
     align-items: centre;
   }
+
+  .reveal{
+    display:flex;
+    justify-content: center;
+  }
   
   /* create four adjacent columns */
 .cell {
@@ -78,7 +83,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 
 }
-
 
 #grassCarp {
     text-align:center;
