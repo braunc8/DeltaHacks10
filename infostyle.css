@@ -12,6 +12,11 @@ body {
   text-decoration: underline;
 }
 
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
 .sectionHead {
     text-align:center;
     font-family: 'Courier New', Courier, monospace;
@@ -20,19 +25,22 @@ body {
 
 .text{
     font-size: 17px;
-
 }
 
-
 /* gridspace for carp types */
+
+#types {
+    text-align:center;
+    padding: 15px;
+}
+
 .grid {
     display: grid;
-    margin: 10px;
-    grid-template-columns: 20% 20% 20%;
+    margin: 40px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     display: flex;
     justify-content: centre;
     align-items: centre;
-
   }
   
   /* create four adjacent columns */
@@ -43,8 +51,8 @@ body {
   }
   
 .cell img {
-    width: 180px;
-    height: 180px;
+    height: 100%;
+    width: 100%;
     border: 2px solid #a5c9d9;
 }
 
@@ -82,3 +90,17 @@ body {
 .child {
     margin:auto;
 }
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
