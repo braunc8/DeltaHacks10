@@ -50,8 +50,8 @@
 /*creating a grid*/
 .gamecentre {
     background-image: url('');
-    background-size: 600px 600px;
-    background-repeat: 2;
+    background-size: 100% 600px;
+    background-repeat: no-repeat;
     background-position: center; 
     display: grid;
     min-height: 600px;
