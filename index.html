@@ -24,7 +24,7 @@
                 let x= Math.floor(Math.random() * 8+1);
                 let id=x.toString();
                 var imageId = document.getElementById(id);
-                changeImage("images/carp.jpg",imageId);//add invasive carp
+                changeImage("images/carp.png",imageId);//add invasive carp
 
                 //generates the images on the method buttons
                 imageId = document.getElementById("i1");
@@ -61,17 +61,27 @@
             //changes the image of a button
             function changeImage(image,imageId) {
                 imageId.src = image;
+
             }
 
             //changes depending on whether the invasive species is there
             function invasiveCheck(num_id){
                 let id=num_id.toString();
                 var imageId = document.getElementById(id);
-                if (imageId.src.endsWith("inv.png")){
-                    changeImage("images/ocean_background.jpg",imageId);//add correct image
+                if (imageId.src.endsWith("carp.png")){
+                    if(method==1){
+ 
+                        changeImage("images/check.png",imageId);//add correct image
+                        
+                    alert("You found the invasive species and used the correct removal method!");
+                    }else{
+                        alert("Wrong removal method! Please change it using the buttons at the bottom.");
+                    } 
+                }
+                else {
+  
+                    changeImage("images/cross.png",imageId); //add correct image
                     
-                } else {
-                    changeImage("images/ocean_background.jpg",imageId); //add correct image
                 }
             }
 
